@@ -16,7 +16,7 @@ return new class extends Migration
             $table->integer('recipe_id');
             $table->integer('ingredient_id');
             $table->integer('unit_id');
-            $table->integer('quantity');
+            $table->string('quantity');
             $table->timestamps();
         });
     }

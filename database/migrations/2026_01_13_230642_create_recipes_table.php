@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->integer('volume');
-            $table->integer('countory_id');
+            $table->integer('country_id');
             $table->timestamps();
         });
     }
