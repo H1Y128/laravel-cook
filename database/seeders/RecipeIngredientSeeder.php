@@ -13,7 +13,7 @@ class RecipeIngredientSeeder extends Seeder
      */
     public function run(): void
     {
-        DB::table('recipe_ingredient')->insert([
+        $recipeIngredients = [
             ['recipe_id' => 1, 'ingredient_id' => 1, 'unit_id' => 1, 'quantity' => '300', 'created_at' => now(), 'updated_at' => now()],
             ['recipe_id' => 1, 'ingredient_id' => 2, 'unit_id' => 2, 'quantity' => '4', 'created_at' => now(), 'updated_at' => now()],
             ['recipe_id' => 1, 'ingredient_id' => 3, 'unit_id' => 2, 'quantity' => '1', 'created_at' => now(), 'updated_at' => now()],
@@ -108,6 +108,8 @@ class RecipeIngredientSeeder extends Seeder
             ['recipe_id' => 10, 'ingredient_id' => 44, 'unit_id' => 6, 'quantity' => '1', 'created_at' => now(), 'updated_at' => now()],
             ['recipe_id' => 10, 'ingredient_id' => 45, 'unit_id' => 4, 'quantity' => '200', 'created_at' => now(), 'updated_at' => now()],
             ['recipe_id' => 10, 'ingredient_id' => 46, 'unit_id' => 14, 'quantity' => '少々', 'created_at' => now(), 'updated_at' => now()],
-        ]);
+        ];
+
+        DB::table('recipe_ingredient')->insert($recipeIngredients);
     }
 }
