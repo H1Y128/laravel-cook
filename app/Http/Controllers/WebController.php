@@ -15,6 +15,8 @@ class WebController extends Controller
         
         $major_categories = MajorCategory::all();
 
-        return view('index', compact('categories', 'major_categories'));
+        $ingredients = [];
+
+        return view('web.index', compact('categories', 'major_categories', 'ingredients'));
     }
 }

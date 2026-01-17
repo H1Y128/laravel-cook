@@ -41,6 +41,10 @@ class CategoriesSeeder extends Seeder
             ['name' => '油', 'major_category_id' => 11],
             ['name' => '香辛料', 'major_category_id' => 11],
             ['name' => 'その他(調味料)', 'major_category_id' => 11],
+            ['name' => '缶詰', 'major_category_id' => 12],
+            ['name' => '冷凍食品', 'major_category_id' => 12],
+            ['name' => 'インスタント食品', 'major_category_id' => 12],
+            ['name' => 'その他(加工食品)', 'major_category_id' => 12],
         ];
         foreach ($caregories as $category) {
             Category::create($category);

@@ -24,7 +24,8 @@ class MajorCategoriesSeeder extends Seeder
             '卵類',
             '穀物類',
             '乳類',
-            '調味料'
+            '調味料',
+            '加工食品',
         ];
 
         foreach ($majorCategories as $category) {
