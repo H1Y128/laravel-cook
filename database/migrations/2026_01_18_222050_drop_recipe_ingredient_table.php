@@ -11,6 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
+        Schema::dropIfExists('recipe_ingredient');
+    }
+
+    /**
+     * Reverse the migrations.
+     */
+    public function down(): void
+    {
         Schema::create('recipe_ingredient', function (Blueprint $table) {
             $table->id();
             $table->foreignId('recipe_id')->constrained();
@@ -19,13 +27,5 @@ return new class extends Migration
             $table->string('quantity');
             $table->timestamps();
         });
-    }
-
-    /**
-     * Reverse the migrations.
-     */
-    public function down(): void
-    {
-        Schema::dropIfExists('recipe_ingredient');
     }
 };
