@@ -51,6 +51,21 @@
             padding-bottom: 100px;
         }
 
+        /* モバイルでのOffcanvasによる強制ロックを無効化 */
+        body {
+            overflow-y: auto !important;
+            /* 縦スクロールを常に許可 */
+            padding-right: 0 !important;
+            /* スクロール禁止時に発生する右側のガタつきを防止 */
+        }
+
+        /* Offcanvasが表示されている時、背景のスクロールを止めるのは「スマホの時だけ」にする設定（任意） */
+        @media (max-width: 767.98px) {
+            .offcanvas-open {
+                overflow: hidden !important;
+            }
+        }
+
         /* PC（768px以上）ではバーが出ないので余白を消す */
         @media (min-width: 768px) {
             body {
